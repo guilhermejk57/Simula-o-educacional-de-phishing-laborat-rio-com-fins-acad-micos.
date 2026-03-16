@@ -1,0 +1,379 @@
+/* Reset e Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif;
+    background-color: #f3f2ef;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    padding: 16px 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.linkedin-logo svg {
+    width: 102px;
+    height: 26px;
+}
+
+/* Main Content */
+.app__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    min-height: calc(100vh - 200px);
+}
+
+/* Card Layout */
+.card-layout {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 24px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 24px;
+}
+
+/* Header Content */
+.header__content {
+    margin-bottom: 24px;
+}
+
+.header__content__heading {
+    font-size: 32px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.9);
+    margin-bottom: 8px;
+}
+
+.header__content__subheading {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+/* Alternate Sign-in */
+.alternate-signin-container {
+    margin-bottom: 16px;
+}
+
+.alternate-signin__btn {
+    width: 100%;
+    padding: 12px 24px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 24px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.2s;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.alternate-signin__btn:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+.alternate-signin__btn svg {
+    flex-shrink: 0;
+}
+
+.alternate-signin__btn-text {
+    font-size: 15px;
+}
+
+/* Google Button */
+.alternate-signin__btn--google:hover {
+    background-color: rgba(66, 133, 244, 0.04);
+    border-color: #4285F4;
+}
+
+/* Microsoft Button */
+.alternate-signin__btn--microsoft:hover {
+    background-color: rgba(0, 120, 212, 0.04);
+    border-color: #0078D4;
+}
+
+/* Apple Button */
+.alternate-signin__btn--apple {
+    color: #000;
+}
+
+.alternate-signin__btn--apple:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Separator */
+.or-separator {
+    position: relative;
+    text-align: center;
+    margin: 24px 0;
+}
+
+.or-separator::before,
+.or-separator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.or-separator::before {
+    left: 0;
+}
+
+.or-separator::after {
+    right: 0;
+}
+
+.or-text {
+    padding: 0 8px;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+}
+
+/* Form Inputs */
+.form__input--floating {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.form__input--floating input {
+    width: 100%;
+    padding: 24px 12px 8px;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form__input--floating input:focus {
+    border-color: #0a66c2;
+    border-width: 2px;
+}
+
+.form__label--floating {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    pointer-events: none;
+    transition: all 0.2s;
+}
+
+.form__input--floating input:focus + .form__label--floating,
+.form__input--floating input:not(:placeholder-shown) + .form__label--floating {
+    top: 8px;
+    font-size: 12px;
+    transform: translateY(0);
+}
+
+/* Password Visibility Toggle */
+.button__password-visibility {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #0a66c2;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Error Messages */
+.form__label--error {
+    color: #d11124;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+/* Links */
+.forgot-password {
+    color: #0a66c2;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Remember Me */
+.remember_me__opt_in {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.remember_me__opt_in input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.remember_me__opt_in label {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Buttons */
+.btn__primary--large {
+    width: 100%;
+    padding: 12px 24px;
+    background-color: #0a66c2;
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn__primary--large:hover {
+    background-color: #004182;
+}
+
+/* Join Now */
+.join-now {
+    text-align: center;
+    font-size: 14px;
+}
+
+.btn__tertiary--medium {
+    color: #0a66c2;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn__tertiary--medium:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer__base {
+    background-color: #fff;
+    padding: 24px;
+    margin-top: auto;
+}
+
+.footer__base__wrapper {
+    max-width: 1128px;
+    margin: 0 auto;
+}
+
+.copyright {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 16px;
+}
+
+.footer__base__nav-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.footer__base__nav-list a {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.footer__base__nav-list a:hover {
+    color: #0a66c2;
+    text-decoration: underline;
+}
+
+/* Utility Classes */
+.hidden__imp {
+    display: none !important;
+}
+
+.invisible__imp {
+    visibility: hidden !important;
+}
+
+.margin-top-12 {
+    margin-top: 12px;
+}
+
+.margin-top-24 {
+    margin-top: 24px;
+}
+
+.w-full {
+    width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card-layout {
+        max-width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .footer__base__nav-list {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* Toast Notifications */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 16px 24px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateX(400px);
+    transition: transform 0.3s ease;
+    z-index: 9999;
+}
+
+.toast--show {
+    transform: translateX(0);
+}
+
+.toast--success {
+    background-color: #057642;
+}
+
+.toast--error {
+    background-color: #d11124;
+}
+
+.toast--notify {
+    background-color: #0a66c2;
+}
